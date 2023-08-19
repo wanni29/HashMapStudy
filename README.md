@@ -1,34 +1,31 @@
-# HashMap 기본 개념 :)
+# HashMap 개념
 
-- 기본 구조
-- String, Integer 쪽에는 클래스도 들어갈수있다.
-```java
- HashMap<String, Integer> stringLengthMap = new HashMap<>();
-```
+- 키와 값으로 이루어짐
+- 빠른 검색 및 조회가 가능
+- 유연한 크기 조정
+- 순서 보장 안함!
+- 중복 허용 안됨!
 
-- 기본 기능
-```java
+# 활용 메소드 모음
 
-        // 키값을 이용해서 불러오기
-        int lengthOfApple = stringLengthMap.get("apple");
-        System.out.println("Length of apple : " + lengthOfApple);
+- put(key, value) : 주어진 키와 값을 맵에 추가
 
-        // 값이 포함되어있는지 확인해보기 (키값)
-        boolean containsBanana = stringLengthMap.containsKey("banana");
-        System.out.println("contains banana : " + containsBanana);
+- get(key) : 주어진 키에 해당하는 값을 가져옴
 
+- containsKey(key) : 특정 키가 맵에 있는지 확인
 
-        stringLengthMap.put("banana", 7);
-        int lengthOfBanana = stringLengthMap.get("banana");
-        System.out.println("length of banana : " + lengthOfBanana);
+- containValue(value) : 특정 값이 맵에 있는지 확인
 
-        // 키값출력 + 밸류값 출력
-        for (String key : stringLengthMap.keySet()) {
-            int value = stringLengthMap.get(key);
-            System.out.println("key : " + key + " ,value : " + value);
-        }
+- remove(key) : 주어진 키에 해당하는 항목을 맵에서 제거
 
-        // 값 제거
-        stringLengthMap.remove("orange");
-        System.out.println("After removing orange : " + stringLengthMap);
-```
+- keySet() : 맵에 있는 모든 키를 세트 형태로 변환
+
+- entrySet() : 맵에 있는 모든 키 값을 쌍으롤 엔트리 형태로 변환
+
+- size() : 크기를 의미
+
+- replace(key, newValue) : 주어진 키에 해당하는 값의 값을 새로운 값으로 대체
+
+- replaceAll(function) : 모든 키 - 값 쌍에 대해 특정 함수를 적용하여 값을 갱신
+
+- compute(key, remappingFunction) : 주어진 키에 대해 특정함수를 적용하여 갱신하거나 새로 계산
